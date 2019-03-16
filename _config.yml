@@ -1,0 +1,127 @@
+# ---------------- #
+#   Main Configs   #
+# ---------------- #
+baseurl:
+url: https://robinye.com
+date_format: "ordinal"
+title: Coding
+subtitle: "Technology changes our life"
+description: "Robin Ye's Blog"
+keywords: Coding, Live Streaming, H264, WebRTC
+timezone: Asia/Shanghai
+encoding: "utf-8"
+side_bar_repo_limit: 5
+
+# ---------------- #
+#      Author      #
+# ---------------- #
+author: Robin Ye
+organization: 
+organization_url: 
+github_username: robinyeeh
+location: Shanghai, China
+email: heaven.robin@gmail.com
+
+# ---------------- #
+#    Navigation    #
+# ---------------- #
+navs:
+  -
+    href: /
+    label: Home
+
+  -
+    href: /categories/
+    label: Categories
+
+#   -
+#    href: /archives/
+#    label: Archives
+
+  -
+    href: /wiki/
+    label: Wiki
+
+  -
+    href: /links/
+    label: Links
+
+  -
+    href: /about/
+    label: About
+
+# ---------------- #
+#       RSS        #
+# ---------------- #
+subscribe_rss: /feed.xml
+
+# ---------------- #
+#      Jekyll      #
+# ---------------- #
+markdown: kramdown
+kramdown:
+    input: GFM
+highlighter: rouge
+paginate: 10
+lsi: false
+quiet: false
+excerpt_separator: "\n\n"
+permalink: /:year/:month/:day/:title/
+gems:
+    - jekyll-github-metadata
+    - rouge
+#     - jekyll-html-pipeline
+    - jekyll-paginate
+    - jekyll-sitemap
+    - jekyll-feed
+    - jemoji
+#     - jekyll-mentions
+collections:
+    wiki:
+        output: true
+        permalink: /wiki/:path/
+
+repository: robinyeeh/srs-stream-stats
+
+# ---------------- #
+#      Comments    #
+# ---------------- #
+# support provider: disqus, gitment, gitalk
+comments_provider: gitalk
+
+# !!!Important!!! Please modify infos below to yours
+# https://disqus.com
+disqus:
+    username: 
+# https://imsun.net/posts/gitment-introduction/
+
+gitment:
+    owner:
+    repo: blog-comments
+    oauth:
+        client_id:
+        client_secret:
+
+# https://github.com/gitalk/gitalk#install
+gitalk:
+    owner: robinyeeh
+    repo: blog-comments
+    clientID: 7c3718de885cbccc920c
+    clientSecret: 2f89dd289ba10432d5c284516878f9b851cb780d
+
+lazy_load_disqus : false
+
+# ---------------- #
+#      Search      #
+# ---------------- #
+simple_jekyll_search:
+    # 是否支持全文搜索
+    fulltext: false
+    # 最多显示多少条搜索结果
+    limit: 10
+
+# ---------------- #
+#    Analytics     #
+# ---------------- #
+google:
+    analytics_id: UA-107857068-1

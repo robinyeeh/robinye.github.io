@@ -13,6 +13,7 @@ safemkdir(){
 
 PID_FILE=$APP_HOME/pid/$APP_NAME.pid
 dateFormat=$(date '+%Y-%m-%d')
+ACCESS_LOG=${LOG_HOME}/${dateFormat}/${SERVICE_NAME}.log
 
 safemkdir $APP_HOME/pid/
 safemkdir $LOG_HOME/$dateFormat
@@ -29,7 +30,7 @@ if [ "$1" == "start" ]; then
     if [ ! -f "$PID_FILE" ]; then
         export JEKYLL_ENV=production
         echo -e $started | tee -a $LOG_HOME/$dateFormat/$SERVICE_NAME.log
-        bundle exec jekyll serve 1>> '$LOG_HOME'/'$dateFormat'/'$SERVICE_NAME'.log 2>> '$LOG_HOME'/'$dateFormat'/'$SERVICE_NAME'.log 2>&1 &"'echo "$!"' > $PID_FILE
+        bundle exec jekyll serve 1>> ${ACCESS_LOG} 2>> ${ACCESS_LOG} 2>&1 &echo $! > ${PID_FILE}
         
 	sleep 20
         tail -n 500 $LOG_HOME/$dateFormat/$SERVICE_NAME.log

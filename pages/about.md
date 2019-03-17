@@ -1,20 +1,20 @@
 ---
 layout: page
 title: About
-description: 打码改变世界
-keywords: Zhuang Ma, 马壮
+description: Technology changes our life
+keywords: Robin Ye
 comments: true
-menu: 关于
+menu: About
 permalink: /about/
 ---
 
-我是马壮，码而生，码而立。
+If you haven't found what you loved, keep Looking，Don’t Settle.
 
-仰慕「优雅编码的艺术」。
+You can't connect the dots looking forward.You can only connect them looking backwards.
 
-坚信熟能生巧，努力改变人生。
+So you have to trust that the dots will somehow connect in your future.
 
-## 联系
+## Contact
 
 {% for website in site.data.social %}
 * {{ website.sitename }}：[@{{ website.name }}]({{ website.url }})

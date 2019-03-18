@@ -28,13 +28,13 @@ yum install -y cmake gcc-c++ gdb gdb-gdbserver
 #### 代码同步
 
 使用 CLion 创建一个 C++ 项目 helloworld。然后，打开菜单 Tools - Deployment - Configuration，配置远程主机以及本地目录与远程目录的映射关系：
-![Alt text]( 2019-02-16-001953.jpg)
+![](/images/blog/c/2019-02-16-001953.jpg)
 
-![Alt text]( 2019-02-16-002249.jpg)
+![](/images/blog/c/2019-02-16-002249.jpg)
 
 右键项目文件夹，选择 Deployment - Upload to 10.88.115.114，便将项目源代码上传至 10.88.115.114 主机上。
 
-![Alt text]( 2019-02-16-002124.jpg)
+![](/images/blog/c/2019-02-16-002124.jpg)
 
 上述我们配置了远程主机与本地主机目录映射，因此执行上传操作后，可以看到源代码已被上传至上述配置的目录中。
 
@@ -108,15 +108,15 @@ Listening on port 1234
 
 返回本地 CLion，配置远程调试信息，增加一个 GDB Remote Debug 配置：
 
-![Alt text]( 2019-02-16-002509.jpg)
+![](/images/blog/c/2019-02-16-002509.jpg)
 
 然后输入以下配置信息：
 
-![Alt text]( 2019-02-16-002550.jpg)
+![](/images/blog/c/2019-02-16-002550.jpg)
 
 设置断点，按下调试按钮，可以看到程序已被执行起来，且中断在断点处，可以看到变量值：
 
-![Alt text]( 2019-02-16-002647.jpg)
+![](/images/blog/c/2019-02-16-002647.jpg)
 
 需要指出的是，helloworld 程序的运行是在远程主机，并不是本地主机，CLion 通过向 gdbserver 发送调试命令从而达到控制远程主机上的 gdb 的目的。
 

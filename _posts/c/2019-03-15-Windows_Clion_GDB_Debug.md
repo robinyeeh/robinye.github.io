@@ -120,7 +120,10 @@ Listening on port 1234
 
 需要指出的是，helloworld 程序的运行是在远程主机，并不是本地主机，CLion 通过向 gdbserver 发送调试命令从而达到控制远程主机上的 gdb 的目的。
 
-Note: 如果提示CMake版本需要升级, 请参考[]() 升级Cmake.
+Note: 如果提示CMake版本需要升级, 请参考[Linux Upgrade CMake to 3.14](https://robinye.com/2019/03/15/Linux_Upgrade_CMake/) 升级Cmake.
+
+Remove debug nginx using GDB:  
+https://www.cnblogs.com/yjf512/archive/2012/05/10/2494635.html
 
 ----
 参考资料  

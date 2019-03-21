@@ -32,7 +32,7 @@ if [ "$1" == "start" ]; then
         echo -e $started | tee -a $LOG_HOME/$dateFormat/$SERVICE_NAME.log
         bundle exec jekyll serve 1>> ${ACCESS_LOG} 2>> ${ACCESS_LOG} 2>&1 &echo $! > ${PID_FILE}
         
-	sleep 20
+	sleep 3
         tail -n 500 $LOG_HOME/$dateFormat/$SERVICE_NAME.log
     else
         echo "$SERVICE_NAME service already started, please stop first and try again"

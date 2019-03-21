@@ -3,7 +3,7 @@ layout: post
 title: "Nginx Openresty Lua Shell Command"
 date: 2019-02-16 16:50:00 +0800
 comments: true
-categories: "Linux"
+categories: "Nginx"
 ---
 
 This article will describe run shell command and return information using nginx openresty and lua script.

@@ -20,6 +20,8 @@ $ which python
 2. Back up python 2.7
 
 ```
+$ sudo yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make
+
 $ cd /usr/bin/
 $ sudo mv python python.bak
 ```
@@ -27,20 +29,17 @@ $ sudo mv python python.bak
 3. Install python3
 
 ```
-$ sudo 
-yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make
-
 $ mkdir -p /opt/install/python
 $ cd /opt/install/python
 $ wget https://www.python.org/ftp/python/3.6.3/Python-3.6.3.tar.xz
 $ tar -xvJf  Python-3.6.3.tar.xz
-$ cd Python-3.6.2
+$ cd Python-3.6.3
 
 $ ./configure prefix=/usr/local/python3
 $ make
 $ sudo make install
 
-$ ln -s /usr/local/python3/bin/python3 /usr/bin/python
+$ sudo ln -s /usr/local/python3/bin/python3 /usr/bin/python
 ```
 
 4. Check if python3 installed 

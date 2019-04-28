@@ -16,7 +16,7 @@ This article will describe how nginx network process works.
 
 ##### Nginx Call Flow Functions
 
-1.  main()
+(1).  main()
  
 main() in "nginx.c" function will be called to startup nginx proccess. 
 - It will call ngx_init_cycle() to init nginx process. 
@@ -47,7 +47,7 @@ if (ngx_process == NGX_PROCESS_SINGLE) {
 }
 ```
 
-2.  ngx_init_cycle()
+(2).  ngx_init_cycle()
 
 ngx_init_cycle() in "ngx_cycle.c" function will be called to init nginx process including load configuration, network bind and listen, init connection memory pool etc. 
 - It will call ngx_open_listening_sockets() to bind and listen port for network handle.
@@ -62,7 +62,7 @@ ngx_init_cycle() in "ngx_cycle.c" function will be called to init nginx process 
     }
 ```
 
-3.  ngx_open_listening_sockets() 
+(3).  ngx_open_listening_sockets() 
 
 ngx_open_listening_sockets() in "ngx_connection.c" will be called to bind and listen port for network handle, it will bind and listen port and save socket listen file descritors ngx_listening_t list. Number of listening list depends on number of workers configured.  Since nginx 1.9.1(Linux Kernel >=3.9.0), it support SO_REUSEPORT flag and multiple socket listen fd can bind to same addr and port. 
 
@@ -140,7 +140,7 @@ if (listen(s, ls[i].backlog) == -1) {
 
 ```
 
-4.  ngx_master_process_cycle()
+(4).  ngx_master_process_cycle()
 
 ngx_master_process_cycle() in "ngx_process_cycle.c" will be called to init worker processes. 
 
@@ -151,7 +151,7 @@ ccf = (ngx_core_conf_t *) ngx_get_conf(cycle->conf_ctx, ngx_core_module);
 ngx_start_cache_manager_processes(cycle, 0);
 ```
 
-1.  ngx_start_worker_processes()
+(5).  ngx_start_worker_processes()
 
 ngx_start_worker_processes() in "unix/ngx_process_cycle.c" will be called to init worker processes depends on now many workers configured. 
 ```
@@ -165,7 +165,7 @@ for (i = 0; i < n; i++) {
     ngx_pass_open_channel(cycle, &ch);
 ```
 
-1.  ngx_spawn_process()
+(6).  ngx_spawn_process()
 
 ngx_spawn_process() in "unix/ngx_process_cycle.c" will be called to fork worker process, and worker process start up. 
 
@@ -187,7 +187,7 @@ default:
 }
 ```
 
-5.  ngx_worker_process_cycle()
+(7).  ngx_worker_process_cycle()
 
 ngx_worker_process_cycle() in "unix/ngx_process_cycle.c" will be called to accept connections and handle requests and responses.
 
@@ -209,7 +209,7 @@ for ( ;; ) {
 }
 ```
 
-1.  ngx_process_events_and_timers()
+(8).  ngx_process_events_and_timers()
 
 ngx_process_events_and_timers() in "ngx_event.c" will be called to accept connections and request messages. Please note that "ngx_process_events()" is hook function and it will call ngx_epoll_process_events().
 
@@ -237,7 +237,7 @@ delta = ngx_current_msec;
 delta = ngx_current_msec - delta;
 ```
 
-6.  ngx_epoll_process_events()
+(9).  ngx_epoll_process_events()
 
 ngx_epoll_process_events() in "ngx_epoll_module.c" will be called to accept connection and read/write TCP messages.
 

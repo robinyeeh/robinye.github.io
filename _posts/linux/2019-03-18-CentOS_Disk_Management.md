@@ -19,7 +19,7 @@ This article will describe how to manage disks on CentOS7.
 
 ##### Disk format and mount
 
-1. Check physical disks
+(1). Check physical disks
 
 ```
 # fdisk -l
@@ -54,7 +54,7 @@ Sector size (logical/physical): 512 bytes / 512 bytes
 I/O size (minimum/optimal): 512 bytes / 512 bytes
 ```
 
-2. Disk format, xfs is recommended for centos7 file system format
+(2). Disk format, xfs is recommended for centos7 file system format
 
 ```
 # mkfs.xfs /dev/sdb
@@ -62,7 +62,7 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes
 # mkfs.xfs /dev/sdd
 ```
 
-3. Disk mount
+(3). Disk mount
 
 Temporarily mount disk
 ```
@@ -86,7 +86,7 @@ and add the following configurations:
 
 Note: uid=0, gid=0 are the user id and group id that you would like to mount for. Run "cat /etc/passwd" to show all users and groups.
 
-4. Check mount
+(4). Check mount
 
 ```
 # df -h

@@ -20,8 +20,9 @@ This article will describe how to manage disks on CentOS7.
 ##### Disk format and mount
 
 1. Check physical disks
+
 ```
-# fdisk -l
+\# fdisk -l
 
 Disk /dev/sda: 599.6 GB, 599550590976 bytes, 1170997248 sectors
 Units = sectors of 1 * 512 = 512 bytes
@@ -56,37 +57,41 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes
 2. Disk format, xfs is recommended for centos7 file system format
 
 ```
-# mkfs.xfs /dev/sdb
-# mkfs.xfs /dev/sdc
-# mkfs.xfs /dev/sdd
+\# mkfs.xfs /dev/sdb
+\# mkfs.xfs /dev/sdc
+\# mkfs.xfs /dev/sdd
 ```
 
 3. Disk mount
 
 Temporarily mount disk
 ```
-cat /etc/passwd
+\# cat /etc/passwd
 
-mount -t xfs /dev/sdb /storage1 -o uid=0, gid=0
-mount -t xfs /dev/sdc /storage2 -o uid=0, gid=0
-mount -t xfs /dev/sdd /storage3 -o uid=0, gid=0
+\# mount -t xfs /dev/sdb /storage1 -o uid=0, gid=0
+\# mount -t xfs /dev/sdc /storage2 -o uid=0, gid=0
+\# mount -t xfs /dev/sdd /storage3 -o uid=0, gid=0
 ```
 
 Permanently mount disk 
 ```
+\# vi /etc/fstab
+
+and add the following configurations: 
+
 /dev/sdb               /storage1          xfs     noatime,nodiratime,defaults,nofail       0 0
 /dev/sdc               /storage2          xfs     noatime,nodiratime,defaults,nofail       0 0
 /dev/sdd               /storage3          xfs     noatime,nodiratime,defaults,nofail       0 0
 ```
 
-uid=0, gid=0 are the user id and group id that you would like to mount for. Run "cat /etc/passwd" to show all users and groups.
+Note: uid=0, gid=0 are the user id and group id that you would like to mount for. Run "cat /etc/passwd" to show all users and groups.
 
 4. Check mount
 
 ```
-# df -h
+\# df -h
 
-# mount -a
+\# mount -a
 ``` 
 
 

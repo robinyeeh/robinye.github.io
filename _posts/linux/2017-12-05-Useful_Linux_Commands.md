@@ -538,6 +538,17 @@ systemctl enable iptables.service #设置防火墙开机启动
 time dd if=/dev/zero of=/opt/app/test.dbf bs=8k count=300000
 ```
 
+##### Change CentOS7 hostname
+
+```
+$ sudo hostname server-01
+$ sudo hostnamectl --static set-hostname "server-01"
+
+check是否生效
+$ hostname
+$ hostnamectl --static
+```
+
 
  
 

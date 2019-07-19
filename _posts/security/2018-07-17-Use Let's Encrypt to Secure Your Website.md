@@ -87,3 +87,13 @@ add the following line:
 ```
 certbot  --server https://acme-v02.api.letsencrypt.org/directory -d "*.robinye.com" --manual --preferred-challenges dns-01 certonly
 ```
+
+#### Check SSL Info
+
+```
+check generated cert:
+$ openssl x509 -in cert.pem -noout -text
+
+check from website:
+$ openssl s_client -connect robinye.com:443
+```

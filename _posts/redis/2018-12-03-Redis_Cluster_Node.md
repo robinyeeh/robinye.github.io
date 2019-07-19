@@ -141,3 +141,42 @@ cd /opt/app/redis
 ```
 
 4) Restore data for all aof and rdb 
+
+
+#### Redis benchmark test
+
+```
+redis-cli --latency -h 192.168.1.100 -p 6379 
+redis-benchmark -h 192.168.1.100 -p 6379 -n 10 -q script load "redis.call('SMEMBERS','test-key-name')"
+redis-benchmark -h 192.168.1.100 -p 6001 -a password -n 1 -q script load "redis.call('SMEMBERS','test-key-name')"
+redis-benchmark -h 192.168.1.100 -p 6379 -n 100 -r 100
+```
+
+#### FAQ
+
+Low performance when using spring-boot-starter-data-redis, we found that spring boot data redis did not set connection pool for lettuce client so there will be 1/8 get performance than single node.
+
+```
+spring:
+    redis:
+        open: true  
+        database: 0
+        timeout: 6000ms  # 连接超时时长（毫秒）
+        password: password
+        cluster:
+            nodes:
+                - 192.168.1.100:6001
+                - 192.168.1.100:6002
+                - 192.168.1.101:6003
+                - 192.168.1.101:6004
+                - 192.168.1.102:6005
+                - 192.168.1.102:6006
+                
+        # please add the following configuration to set connection pool for cluster mode 
+        lettuce:
+            pool:
+                max-active: 100
+                max-idle: 20
+                min-idle: 10
+                max-wait: 1000
+```

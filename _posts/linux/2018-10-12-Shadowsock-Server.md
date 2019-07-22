@@ -6,10 +6,11 @@ comments: true
 categories: "Linux"
 ---
 
-### RSync via SSH ###
+#### Shadowsock Server Installation
 
-#### Install Shadowsock Server
+##### Install Shadowsock Server
 1. Enable Google BBR:
+
 ```
 # rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 # rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-2.el7.elrepo.noarch.rpm
@@ -22,6 +23,7 @@ categories: "Linux"
 ```
 
 2. Check linux network config
+
 ```
 # echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
 # echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
@@ -87,7 +89,7 @@ categories: "Linux"
 # systemctl disable firewalld.service
 ```
 
-### Shadowsocks client
+#### Shadowsocks client
 
 Configure shadow Socks Linux client:
 
@@ -96,6 +98,7 @@ Configure shadow Socks Linux client:
 ```
 
 1. Install polipo
+
 ```
 # git clone https://github.com/jech/polipo.git
 # sudo yum install  texinfo  -y
@@ -106,6 +109,7 @@ Configure shadow Socks Linux client:
 ```
 
 2. And add the following configuration
+
 ```
 logSyslog = true
 logFile = /var/log/polipo/polipo.log
@@ -127,6 +131,7 @@ daemonise = true
 ```
 
 3. Configure http and https proxy
+
 ```
 # vi ~/.bash_profile
 
@@ -135,6 +140,7 @@ export https_proxy="http://127.0.0.1:8123/"
 ```
 
 4. Enable proxy
+
 ```
 # nohup sslocal -c shadowsocks.json  -v 2&
 ```

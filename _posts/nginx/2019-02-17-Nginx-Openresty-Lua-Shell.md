@@ -50,6 +50,7 @@ make
 
 chmod +x sockproc
 ./sockproc /tmp/shell.sock
+chmod 0666 /tmp/shell.sock
 ```
 
 #### Configure Nginx

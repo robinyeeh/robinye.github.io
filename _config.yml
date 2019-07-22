@@ -87,7 +87,7 @@ repository: robinyeeh/srs-stream-stats
 #      Comments    #
 # ---------------- #
 # support provider: disqus, gitment, gitalk
-comments_provider: gitalk
+#comments_provider: gitalk
 
 # !!!Important!!! Please modify infos below to yours
 # https://disqus.com

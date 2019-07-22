@@ -91,23 +91,24 @@ comments_provider: gitalk
 
 # !!!Important!!! Please modify infos below to yours
 # https://disqus.com
-disqus:
-    username: 
+#disqus:
+#    username:
 # https://imsun.net/posts/gitment-introduction/
 
-gitment:
-    owner:
-    repo: blog-comments
-    oauth:
-        client_id:
-        client_secret:
+#gitment:
+#    owner:
+#    repo: blog-comments
+#    oauth:
+#        client_id:
+#        client_secret:
+#    lazy: true
 
 # https://github.com/gitalk/gitalk#install
-gitalk:
-    owner: robinyeeh
-    repo: blog-comments
-    clientID: 7c3718de885cbccc920c
-    clientSecret: 2f89dd289ba10432d5c284516878f9b851cb780d
+#gitalk:
+#    owner: robinyeeh
+#    repo: blog-comments
+#    clientID: 7c3718de885cbccc920c
+#    clientSecret: 2f89dd289ba10432d5c284516878f9b851cb780d
 
 lazy_load_disqus : false
 

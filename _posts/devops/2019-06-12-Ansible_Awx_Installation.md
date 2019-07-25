@@ -73,7 +73,7 @@ https://docs.ansible.com/ansible-tower/
 Create github access credential and target machines credential. For github credential, please select "Source Control", and for target machines, please 
 select "Machine". For the password, it's recommended using private key instead of password for production. But you could use password for local testing.
 
-![](/images/devops/create_credential.png)
+![](/images/blog/devops/create_credential.png)
 
 2. Create project 
 
@@ -81,7 +81,7 @@ Create project and add playbook. You can either create playbook and place under 
 
 You could refer to the example playbook at https://github.com/robinyeeh/ansible-awx-roles-demo 
 
-![](/images/devops/create_project.png)
+![](/images/blog/devops/create_project.png)
 
 3. Create inventory, group and hosts
 
@@ -102,27 +102,27 @@ installation_dir: /opt/install/{{ project }}/{{ date }}
 project_dir: /opt/app/{{ project }}
 ```
 
-![](/images/devops/create_inventory.png)
+![](/images/blog/devops/create_inventory.png)
 
-![](/images/devops/create_group.png)
+![](/images/blog/devops/create_group.png)
 
-![](/images/devops/create_host.png)
+![](/images/blog/devops/create_host.png)
 
 4. Create template
 
 Please select inventory, project you created, and select correct playbook. For credential, it should be target machines access credential.
 
-![](/images/devops/create_template.png)
+![](/images/blog/devops/create_template.png)
 
 5. Update SCM
 
 Click button to update latest playbook.
 
-![](/images/devops/update_scm.png)
+![](/images/blog/devops/update_scm.png)
 
 6. Start job using created template
 
-![](/images/devops/lauch_template.png)
+![](/images/blog/devops/lauch_template.png)
 
 
 

@@ -10,7 +10,7 @@ categories: "DevOps"
 #### Ansible Awx Installation ####
 
 Ansisble awx is an open source project for auto deployment based on ansible tower, you could deploy apps via web ui on multiple machines.
-github: https://github.com/ansible/awx
+github: [https://github.com/ansible/awx](https://github.com/ansible/awx)
 
 ##### Install Docker
 
@@ -60,11 +60,8 @@ password : password
 
 You can access the following website to view manual. 
 
-```
-https://blog.51cto.com/10616534/2407182?source=drh
-
-https://docs.ansible.com/ansible-tower/
-```
+[https://blog.51cto.com/10616534/2407182?source=drh](https://blog.51cto.com/10616534/2407182?source=drh)
+[https://docs.ansible.com/ansible-tower/](https://docs.ansible.com/ansible-tower/)
 
 ##### Quick Start Steps
 
@@ -79,7 +76,7 @@ select "Machine". For the password, it's recommended using private key instead o
 
 Create project and add playbook. You can either create playbook and place under /opt/app/ansible/awx/projects or pull from git.
 
-You could refer to the example playbook at https://github.com/robinyeeh/ansible-awx-roles-demo 
+You could refer to the example playbook at [https://github.com/robinyeeh/ansible-awx-roles-demo](https://github.com/robinyeeh/ansible-awx-roles-demo) 
 
 ![](/images/blog/devops/create_project.png)
 

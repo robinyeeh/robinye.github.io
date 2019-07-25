@@ -60,7 +60,7 @@ password : password
 
 You can access the following website to view manual. 
 
-[https://blog.51cto.com/10616534/2407182?source=drh](https://blog.51cto.com/10616534/2407182?source=drh)
+[https://blog.51cto.com/10616534/2407182?source=drh](https://blog.51cto.com/10616534/2407182?source=drh)  
 [https://docs.ansible.com/ansible-tower/](https://docs.ansible.com/ansible-tower/)
 
 ##### Quick Start Steps

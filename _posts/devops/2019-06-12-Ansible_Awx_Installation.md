@@ -30,6 +30,8 @@ $ vi inventory
 
 add the following configuration:
 project_data_dir=/opt/app/ansible/awx/projects
+postgres_data_dir=/opt/app/ansible/awx/tmp/pgdocker
+docker_compose_dir=/opt/app/ansible/awx/tmp/awxcompose
 
 $ ansible-playbook -i inventory install.yml -vv
 ```

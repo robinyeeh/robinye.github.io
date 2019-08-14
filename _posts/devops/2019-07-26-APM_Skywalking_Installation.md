@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "APM SkyWalking Installation"
-date: 2019-06-12 16:12:58 +0080
+date: 2019-07-26 16:55:00 +0080
 comments: true
 categories: "DevOps"
 ---
@@ -46,4 +46,18 @@ nohup java -javaagent:/opt/app/apache-skywalking-apm-bin/agent/skywalking-agent.
 
 ```
 UI: http://localhost:8080
+```
+
+##### Support Oracle Trace
+
+```
+$ git clone https://github.com/SkyAPM/java-plugin-extensions
+
+Download ojdbc14 10.2.0.4 from oracle and install locally:
+$ mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc14 -Dversion=10.2.0.4.0 -Dpackaging=jar -Dfile=Oracle_10g_10.2.0.4_JDBC_ojdbc14.jar
+$ cd java-plugin-extensions
+$ mvn clean package
+$ cp oracle-10.x-plugin/target/apm-oracle-10.x-plugin-1.0.1.jar /opt/app/apache-skywalking-apm-bin/agent/plugins
+
+restart your application
 ```

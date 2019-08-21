@@ -43,3 +43,16 @@ $ go version
 
 go version go1.12.1 linux/amd64
 ```
+
+##### Run Go App
+
+```
+$ go run startup.go
+```
+
+##### Build Go App to Executable File
+
+```
+$ export GOPATH=/opt/app/appname_dir
+$ go build .
+``` 

@@ -101,3 +101,9 @@ ffmpeg -i cut3.mp4 -c copy -bsf:v h264_mp4toannexb -f mpegts cut3.ts
 
 ffmpeg -i "concat:cut/cut-000.ts|cut/cut-001.ts|cut/cut-002.ts" -c copy -bsf:a aac_adtstoasc -movflags +faststart out.mp4
 ```
+
+13. Check Supported Encoders
+
+```
+./ffmpeg -encoders | grep x264
+```

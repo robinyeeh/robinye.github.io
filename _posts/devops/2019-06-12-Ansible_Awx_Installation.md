@@ -86,7 +86,6 @@ You could refer to the example playbook at [https://github.com/robinyeeh/ansible
 
 Please add the following variables when creating inventory:
 ```
----
 remote_user: root
 become_user: root
 become: true

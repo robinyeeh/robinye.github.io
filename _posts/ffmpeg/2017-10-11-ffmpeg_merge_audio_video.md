@@ -3,7 +3,7 @@ layout: post
 title: "ffmpeg 合并音视频"
 date: 2017-10-11 11:35:58 +0000
 comments: true
-categories: "Codec"
+categories: "ffmpeg"
 ---
 
 ###ffmpeg 合并音视频###

@@ -85,16 +85,17 @@ You could refer to the example playbook at [https://github.com/robinyeeh/ansible
 3. Create inventory, group and hosts
 
 Please add the following variables when creating inventory:
+
 ```
+\-\-\-
 remote_user: root
 become_user: root
 become: true
 
 project: mbp
 version: 1.0.0
-#build: g63782e4
 env: dev
-date: "{{ lookup('pipe', 'date +%Y%m%d') }}"
+date: "\{\{ lookup('pipe', 'date +%Y%m%d') \}\}"
 source_dir: /var/lib/awx/projects/packages
 installation_dir: /opt/install/{{ project }}/{{ date }}
 project_dir: /opt/app/{{ project }}

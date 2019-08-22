@@ -3,7 +3,7 @@ layout: post
 title: "ffmpeg 生成MPEG Dash"
 date: 2017-10-11 11:35:58 +0000
 comments: true
-categories: "Codec"
+categories: "ffmpeg"
 ---
 
 

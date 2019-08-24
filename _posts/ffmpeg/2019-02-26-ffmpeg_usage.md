@@ -27,19 +27,16 @@ ffprobe test0.mp4 -show_frames | grep -E 'pict_type|coded_picture_number|pkt_siz
 ```
 
 4. Show Video Frames Information
-
 ```
 ffprobe -show_frames -print_format csv -select_streams v /Users/robin/Documents/clip.flv > 12.csv
 ```
 
 5. Show Frames PTS
-
 ```
 ffmpeg -i test.mp4 -vf select="between(n\,200\,300),setpts=PTS-STARTPTS" test2.mp4
 ```
 
 6. Extract Pictures from Video
-
 Extract pictures every 5 seconds from 00:00:00 with duration 01:00. 
 
 ```
@@ -52,7 +49,6 @@ ffmpeg -i test.mp4 -ss 00:00:00  -to 00:01:00 -f image2 -vf "fps=24,select='not(
 ````
 
 7. Transcode TS
-
 Transcode ts with video codec: x264, resolutieon:1024x768, video profile: Main, level 31, B frames : 2,  auto insert B frame : off, fps : 25, B/P 
 frame previous reference frames : 1, pixel format : yuv420p, video bite rate : 1000kbps, audio codec : aac, audio bitrate: 128kbps, audio sample rate : 44100
 
@@ -61,13 +57,11 @@ ffmpeg -i  a.ts -vcodec libx264 -s 1024x768 -profile:v Main  -level 31 -bf 2 -b_
 ```
 
 8. Show Stream Info
-
 ```
 ffprobe -show_streams -print_format json test.mp4
 ```
 
 9. Push RTMP Stream with MP4
-
 ```
 ffmpeg -threads 2 -stream_loop -1  -re -i /Users/robin/Documents/clip.flv -fflags +genpts  -vcodec copy -acodec copy -f flv rtmp://127.0.0.1:1935/live/stream01
 ```
@@ -78,19 +72,16 @@ ffmpeg -threads 2 -stream_loop -1  -re -i ./test.mp4 -fflags +genpts  -vcodec li
 ```
 
 10. Convert MP4 to HLS
-
 ```
 ffmpeg  -i test.mp4 -c copy -map 0 -bsf:v h264_mp4toannexb -f hls -hls_wrap 0 -hls_time 30 -hls_segment_filename cut/'cut-%03d.ts' out.m3u8
 ```
 
 11. Remux MPEGTS to MP4
-
 ```
 ffmpeg -i cut/cut-000.ts -c copy -f mp4 cut/cut-000.mp4
 ```
 
 12. Concat MP4
-
 ```
 ffmpeg -i cut1.mp4 -c copy -bsf:v h264_mp4toannexb -f mpegts cut1.ts
 ffmpeg -i cut2.mp4 -c copy -bsf:v h264_mp4toannexb -f mpegts cut2.ts
@@ -100,13 +91,11 @@ ffmpeg -i "concat:cut/cut-000.ts|cut/cut-001.ts|cut/cut-002.ts" -c copy -bsf:a a
 ```
 
 13. Check Supported Encoders
-
 ```
 ./ffmpeg -encoders | grep x264
 ```
 
 14. Fade in and Fade Out
-
 ```
 ffmpeg -r 1/5 -i in%03d.jpg -c:v libx264 -r 30 -y -pix_fmt yuv420p slide.mp4 
 ffmpeg -i slide.mp4 -y -vf fade=in:0:30 slide_fade_in.mp4
@@ -114,7 +103,6 @@ ffmpeg -i slide_fade_in.mp4 -y -vf fade=out:120:30 slide_fade_in_out.mp4
 ```
 
 15. Cut mp4
-
 ```
 ffmpeg -ss 00:00:00 -t 00:00:30 -accurate_seek -i test.mp4 -codec copy -avoid_negative_ts 1 cut1.mp4
 ```

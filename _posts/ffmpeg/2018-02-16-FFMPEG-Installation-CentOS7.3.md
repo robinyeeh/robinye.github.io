@@ -18,7 +18,6 @@ $ git clone https://github.com/FFmpeg/FFmpeg.git
 ##### Install FFMpeg
 
 1. Install fdk aac
-
 ```
 $ wget https://jaist.dl.sourceforge.net/project/opencore-amr/fdk-aac/fdk-aac-0.1.6.tar.gz
 $ tar zxvf fdk-aac-0.1.6.tar.gz
@@ -33,7 +32,6 @@ $ make install
 ```
 
 2. Install yasm
-
 ```
 $ wget http://www.tortall.net/projects/yasm/releases/yasm-1.3.0.tar.gz
 $ tar zxvf yasm-1.3.0.tar.gz
@@ -44,7 +42,6 @@ $ make install
 ```
 
 3. Install nasm
-
 ```
 $ wget https://www.nasm.us/pub/nasm/releasebuilds/2.13.03/nasm-2.13.03.tar.gz
 $ tar zxvf nasm-2.13.03.tar.gz
@@ -55,7 +52,6 @@ $ make install
 ```
 
 4. Install x264
-
 ```
 $ wget wget http://mirror.yandex.ru/mirrors/ftp.videolan.org/x264/snapshots/last_x264.tar.bz2
 $ bunzip last_x264.tar.bz2
@@ -67,7 +63,6 @@ $ make install
 ```
 
 5. Install x265
-
 ```
 $ yum -y install hg cmake mercurial
 $ hg clone http://hg.videolan.org/x265
@@ -125,7 +120,6 @@ wget http://downloads.xiph.org/releases/theora/libtheora-1.1.1.tar.gz
 ##### FFMpeg Compile Configure Options
 
 1. Standard options
-
 |Option      |Description                         |
 |:-----      |-----                               |
 |–logfile=FILE	    |配置过程中的log输出文件，默认输出到当前位置的ffbuild/config.log文件|
@@ -144,7 +138,6 @@ wget http://downloads.xiph.org/releases/theora/libtheora-1.1.1.tar.gz
 |–install-name-dir=DIR	|Darwin directory name for installed targets|
 
 2. Licensing options
-
 |Option      |Description                         |
 |:-----      |-----                               |
 |–enable-gpl	    |allow use of GPL code, the resulting libs and binaries will be under GPL [no]|
@@ -152,7 +145,6 @@ wget http://downloads.xiph.org/releases/theora/libtheora-1.1.1.tar.gz
 |–enable-nonfree	|allow use of nonfree code, the resulting libs and binaries will be unredistributable [no]|
 
 3. Configuration options
-
 |Option      |Description                         |
 |:-----      |-----                               |
 |–disable-static	|不生产静态库，默认生成静态库|
@@ -165,7 +157,6 @@ wget http://downloads.xiph.org/releases/theora/libtheora-1.1.1.tar.gz
 |–enable-raise-major	|增加主版本号|
 
 4. Program options
-
 |Option      |Description                         |
 |:-----      |-----                               |
 |–disable-programs	|build command line programs|
@@ -175,7 +166,6 @@ wget http://downloads.xiph.org/releases/theora/libtheora-1.1.1.tar.gz
 |–enable-ffserver	|disable ffserver build|
 
 5. Component options
-
 |Option      |Description                         |
 |:-----      |-----                               |
 |–disable-avdevice	|disable libavdevice build|
@@ -202,7 +192,6 @@ wget http://downloads.xiph.org/releases/theora/libtheora-1.1.1.tar.gz
 |–disable-pixelutils	|disable pixel utils in libavutil|
 
 6. Individual component options
-
 You can enable individual encoders such as x264, x265, ac3, eac3.
 
 |Option      |Description                         |
@@ -244,7 +233,6 @@ You can enable individual encoders such as x264, x265, ac3, eac3.
 |–disable-filters	|disable all filters|
 
 7. External library support
-
 |Option      |Description                         |
 |:-----      |-----                               |
 |–enable-avisynth	|enable reading of AviSynth script files [no]|
@@ -332,7 +320,6 @@ You can enable individual encoders such as x264, x265, ac3, eac3.
 |–disable-zlib	|disable zlib [autodetect]|
 
 8. hardware acceleration features
-
 |Option      |Description                         |
 |:-----      |-----                               |
 |–disable-audiotoolbox	|disable Apple AudioToolbox code [autodetect]|
@@ -352,7 +339,6 @@ You can enable individual encoders such as x264, x265, ac3, eac3.
 |–disable-videotoolbox	|disable VideoToolbox code [autodetect]|
 
 9. Toolchain options
-
 |Option      |Description                         |
 |:-----      |-----                               |
 |–arch=ARCH	|选择目标架构[armv7a/aarch64/x86/x86_64等]|
@@ -407,7 +393,6 @@ You can enable individual encoders such as x264, x265, ac3, eac3.
 |–env=”ENV=override”	|override the environment variables|
 
 10. Advanced options
-
 |Option      |Description                         |
 |:-----      |-----                               |
 |–malloc-prefix=PREFIX	|prefix malloc and related names with PREFIX|
@@ -419,7 +404,6 @@ You can enable individual encoders such as x264, x265, ac3, eac3.
 |–sws-max-filter-size=N	|the max filter size swscale uses [256]|
 
 11. Optimization options
-
 |Option      |Description                         |
 |:-----      |-----                               |
 |–disable-asm	|disable all assembly optimizations|
@@ -457,7 +441,6 @@ You can enable individual encoders such as x264, x265, ac3, eac3.
 |–disable-fast-unaligned	|consider unaligned accesses slow|
 
 12. Developer options
-
 |Option      |Description                         |
 |:-----      |-----                               |
 |–disable-debug	|disable debugging symbols|

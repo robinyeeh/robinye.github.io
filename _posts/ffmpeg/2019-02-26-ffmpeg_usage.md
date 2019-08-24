@@ -11,20 +11,17 @@ categories: "ffmpeg"
 
 
 1. Save RTMP stream to mp4
-
 ```
 ffmpeg -i rtmp://192.168.3.43:1935/linear/test001?token=1551176683-ea6e1e45cecec8d802906ea44d412902 -c copy -flags +global_header -f segment -segment_time 60 -segment_format_options movflags=+faststart -reset_timestamps 1 test%d.mp4
 ```
 
 
 2. Extract frame and get frame type, frame codec and frame size
-
 ```
 ffprobe test0.mp4 -show_frames | grep -E 'pict_type|coded_picture_number|pkt_size' > frames.txt
 ```
 
 3. Record RTMP Stream
-
 ```
 ./ffmpeg -i rtmp://172.17.120.242:1937/live/ai-4 -c copy clip.flv
 ```
@@ -106,4 +103,18 @@ ffmpeg -i "concat:cut/cut-000.ts|cut/cut-001.ts|cut/cut-002.ts" -c copy -bsf:a a
 
 ```
 ./ffmpeg -encoders | grep x264
+```
+
+14. Fade in and Fade Out
+
+```
+ffmpeg -r 1/5 -i in%03d.jpg -c:v libx264 -r 30 -y -pix_fmt yuv420p slide.mp4 
+ffmpeg -i slide.mp4 -y -vf fade=in:0:30 slide_fade_in.mp4
+ffmpeg -i slide_fade_in.mp4 -y -vf fade=out:120:30 slide_fade_in_out.mp4
+```
+
+15. Cut mp4
+
+```
+ffmpeg -ss 00:00:00 -t 00:00:30 -accurate_seek -i test.mp4 -codec copy -avoid_negative_ts 1 cut1.mp4
 ```

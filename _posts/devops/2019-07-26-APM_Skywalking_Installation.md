@@ -61,3 +61,15 @@ $ cp oracle-10.x-plugin/target/apm-oracle-10.x-plugin-1.0.1.jar /opt/app/apache-
 
 restart your application
 ```
+
+##### Trace Ignore Plugin
+
+```
+$ cp apache-skywalking-apm-bin/agent/optional-plugins/apm-trace-ignore-plugin-6.3.0.jar apache-skywalking-apm-bin/agent/plugins/
+$ cd apache-skywalking-apm-bin/agent/config
+$ vi apm-trace-ignore-plugin.config
+
+Add rules like:
+trace.ignore_path=/eureka/apps/**, /eureka/apps2/**
+```
+

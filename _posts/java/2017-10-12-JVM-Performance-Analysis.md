@@ -194,3 +194,12 @@ MC, MU：metaspace capacity and used
 YGC、YGT：new gen GC events and GC time
 FGC、FGCT：Full GC events and Full GC time
 GCT：Total GC time
+
+##### JMX
+java -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=1200 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=192.168.1.74 -jar demo-0.0.1-SNAPSHOT.jar
+
+${JAVA_HOME}/bin/jvisualvm
+
+Add JMX connection
+
+https://blog.csdn.net/see__you__again/article/details/51998038

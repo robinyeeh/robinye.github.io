@@ -13,13 +13,19 @@ This article will describe how to use produce and consume message via python cli
 
 ```
 List kafka topic:
-$ ./kafka-topics.sh --zookeeper 127.0.0.1:2181 --list
+$ ./bin/kafka-topics.sh --zookeeper 127.0.0.1:2181 --list
+
+View kafka topic:
+./bin/kafka-topics.sh --describe --zookeeper 127.0.0.1:2181 --topic test-topic01
+
+Change topic partition count:
+./bin/kafka-topics.sh --zookeeper 127.0.0.1:2181 --alter --topic test-topic01 --partitions 2
 
 Show offset:
-$ kafka-run-class.sh kafka.tools.GetOffsetShell --broker-list '127.0.0.1:9092' --topic 'topic_name' --time -1
+$ ./bin/kafka-run-class.sh kafka.tools.GetOffsetShell --broker-list '127.0.0.1:9092' --topic 'topic_name' --time -1
 
 Show consume message :
-kafka-run-class.sh kafka.tools.SimpleConsumerShell --broker-list '127.0.0.1:9092' --topic 'topic_name' --max-messages 1 --offset 9 --partition 0
+./bin/kafka-run-class.sh kafka.tools.SimpleConsumerShell --broker-list '127.0.0.1:9092' --topic 'topic_name' --max-messages 1 --offset 9 --partition 0
 
 Produce message:
 ./bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test_topic01

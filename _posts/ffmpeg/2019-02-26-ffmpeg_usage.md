@@ -119,3 +119,23 @@ ffmpeg -i slide_fade_in.mp4 -y -vf fade=out:120:30 slide_fade_in_out.mp4
 ```
 ffmpeg -ss 00:00:00 -t 00:00:30 -accurate_seek -i test.mp4 -codec copy -avoid_negative_ts 1 cut1.mp4
 ```
+
+16. Extract yuv from video
+
+```
+ffmpeg -i  test.mp4 -pix_fmt yuv420p test.yuv
+```
+
+17. Extract ac3 from video
+
+```
+ffmpeg -i test.mts -acodec copy -vn test.ac3
+```
+
+18. Extract h264 from video
+
+```
+ffmpeg -i test.mts -vcodec copy -an -f h264 test.h264
+```
+
+

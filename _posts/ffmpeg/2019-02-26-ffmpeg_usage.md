@@ -137,5 +137,12 @@ ffmpeg -i test.mts -acodec copy -vn test.ac3
 ```
 ffmpeg -i test.mts -vcodec copy -an -f h264 test.h264
 ```
+19. Play yuv data
+
+```
+ffplay -f rawvideo -video_size 1000x562 test.yuv 
+```
+
+
 
 

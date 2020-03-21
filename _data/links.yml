@@ -18,3 +18,15 @@
 
 - name: 在线正则表达式测试
   url: http://tool.oschina.net/regex
+
+- name: https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
+  url: https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
+
+- name: C++实现RTMP协议发送H.264编码及AAC编码的音视频
+  url: https://www.cnblogs.com/haibindev/archive/2011/12/29/2305712.html
+
+- name: CUDA
+  url: https://www.jianshu.com/p/34a504af8d51
+
+- name: 罗素 - 专注音视频、流媒体
+  url: http://www.rosoo.net/

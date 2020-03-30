@@ -51,6 +51,12 @@ make
 chmod +x sockproc
 ./sockproc /tmp/shell.sock
 chmod 0666 /tmp/shell.sock
+
+Add the above configuration to /etc/rc.local in case server reboot
+vi /etc/rc.local
+
+/root/sockproc/sockproc /tmp/shell.sock 
+chmod 0666 /tmp/shell.sock
 ```
 
 #### Configure Nginx

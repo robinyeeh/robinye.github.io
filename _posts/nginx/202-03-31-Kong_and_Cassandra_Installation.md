@@ -41,12 +41,11 @@ $ cassandra
 
 4. Check installation
 ```
-\$ cqlsh
+$ cqlsh
 
 cqlsh> describe cluster
 cqlsh> describe keyspaces
 cqlsh> show version
-[cqlsh 5.0.1 | Cassandra 3.11.6 | CQL spec 3.4.4 | Native protocol v4]
 ```
 
 ##### Install Kong

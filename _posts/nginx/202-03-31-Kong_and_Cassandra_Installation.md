@@ -52,6 +52,7 @@ cqlsh> show version
 Official website: https://konghq.com/
 
 1. Install Kong
+
 ```
 # mkdir -p /opt/install/kong
 # wget https://bintray.com/kong/kong-rpm/rpm -O bintray-kong-kong-rpm.repo
@@ -63,6 +64,7 @@ kong version
 ```
 
 2. Change Kong Configuration
+
 ```
 # cd /etc/kong
 # cp kong.conf.default kong.conf
@@ -85,6 +87,7 @@ db_update_propagation = 10
 ```
 
 3. Check if Kong Started
+
 ```
 #  curl 127.0.0.1:8001
 ```

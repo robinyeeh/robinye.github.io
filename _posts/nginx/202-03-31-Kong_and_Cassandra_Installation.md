@@ -42,7 +42,6 @@ $ cassandra
 4. Check installation
 ```
 $ cqlsh
-
 cqlsh> describe cluster
 cqlsh> describe keyspaces
 cqlsh> show version

@@ -41,7 +41,7 @@ $ cassandra
 
 4. Check installation
 ```
-$ cqlsh
+\$ cqlsh
 
 cqlsh> describe cluster
 cqlsh> describe keyspaces

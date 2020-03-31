@@ -29,20 +29,17 @@ gpgkey=https://downloads.apache.org/cassandra/KEYS
 ```
 
 2. Install Cassandra
-
 ```
 # yum install cassandra
 ```
 
 3. Start cassandra
-
 ```
 # su - cassandra
 $ cassandra
 ```
 
 4. Check installation
-
 ```asm
 $ cqlsh
 
@@ -58,7 +55,6 @@ cqlsh> show version
 Official website: https://konghq.com/
 
 1. Install Kong
-
 ```
 # mkdir -p /opt/install/kong
 # wget https://bintray.com/kong/kong-rpm/rpm -O bintray-kong-kong-rpm.repo
@@ -70,7 +66,6 @@ kong version
 ```
 
 2. Change Kong Configuration
-
 ```
 # cd /etc/kong
 # cp kong.conf.default kong.conf
@@ -93,7 +88,6 @@ db_update_propagation = 10
 ```
 
 3. Check if Kong Started
-
 ```
 #  curl 127.0.0.1:8001
 ```
@@ -107,7 +101,6 @@ Official website: https://pantsel.github.io/konga/
 github: https://github.com/pantsel/konga
 
 1. Install Nodejs
-
 ```
 # yum install gcc gcc-c++
 # cd /opt/app

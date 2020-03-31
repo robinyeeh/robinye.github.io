@@ -41,6 +41,7 @@ $ cassandra
 
 4. Check installation
 ```
+$ cqlsh
 cqlsh> describe cluster
 cqlsh> describe keyspaces
 cqlsh> show version
@@ -51,6 +52,7 @@ cqlsh> show version
 Official website: https://konghq.com/
 
 1. Install Kong
+
 ```
 # mkdir -p /opt/install/kong
 # wget https://bintray.com/kong/kong-rpm/rpm -O bintray-kong-kong-rpm.repo
@@ -62,6 +64,7 @@ kong version
 ```
 
 2. Change Kong Configuration
+
 ```
 # cd /etc/kong
 # cp kong.conf.default kong.conf
@@ -84,6 +87,7 @@ db_update_propagation = 10
 ```
 
 3. Check if Kong Started
+
 ```
 #  curl 127.0.0.1:8001
 ```
@@ -97,6 +101,7 @@ Official website: https://pantsel.github.io/konga/
 github: https://github.com/pantsel/konga
 
 1. Install Nodejs
+
 ```
 # yum install gcc gcc-c++
 # cd /opt/app
@@ -118,6 +123,7 @@ export PATH=$NODE_HOME/bin:$PATH
 ```
 
 2. Install Konga
+
 ```
 # npm run bower-deps
 # npm start

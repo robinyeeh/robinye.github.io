@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "TiDB Installation"
-date: 2020-04-01 18:39:58 +0000
+date: 2020-04-01 18:39:58 +0800
 comments: true
 categories: "Database"
 ---
 
-###TiDB Installation###
+### TiDB Installation###
 
 
 1. Install TiDB

@@ -6,7 +6,7 @@ comments: true
 categories: "Database"
 ---
 
-### TiDB Installation###
+### TiDB Installation
 
 
 1. Install TiDB

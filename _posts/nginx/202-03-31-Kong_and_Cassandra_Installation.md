@@ -126,7 +126,15 @@ export PATH=$NODE_HOME/bin:$PATH
 
 ```
 # npm run bower-deps
+
+For local:
 # npm start
+
+For prod:
+# cd /opt/app/konga
+# cp .env_example .env
+# node ./bin/konga.js prepare
+# npm run production
 ```
 
 It will just use local database, it will be better to use MySQL, or Mongo instead.
@@ -138,8 +146,34 @@ Access http://127.0.0.1:1337
 You need to input name and kong admin url like "kong" and "http://127.0.0.1:8001"
 
 
+#### Cassandra CQL Quick Usage
 
+```
+1. Show clusters
+desc cluster; 
 
- 
+2. Show keyspaces
+desc keyspaces;
 
+3. Show special keyspace
+desc keyspace kong;
 
+4. Create keyspace
+CREATE KEYSPACE knet WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 1 };
+
+5. Use keyspace 
+use knet ;
+
+6. Show tables
+desc tables; 
+
+7. Show table details
+desc table upstreams
+
+8. Create table
+create table abc ( id int primary key, name varchar, age int );
+
+9. Drop table
+drop table upstreams1;
+
+```

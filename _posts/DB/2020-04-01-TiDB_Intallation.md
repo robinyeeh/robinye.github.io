@@ -10,6 +10,7 @@ categories: "Database"
 
 
 1. Install TiDB
+
 ```
 # mkdir -p /opt/install/tidb
 # cd /opt/install/tidb
@@ -26,6 +27,7 @@ categories: "Database"
 ```
 
 2. Install MySQL Client
+
 ```
 # wget https://repo.mysql.com//mysql57-community-release-el7-11.noarch.rpm 
 # yum install -y mysql57-community-release-el7-11.noarch.rpm 
@@ -33,6 +35,7 @@ categories: "Database"
 ```
 
 3. Check and Test
+
 ```
 # mysql -h 127.0.0.1 -P 4000 -u root
 ```

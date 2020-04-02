@@ -3,7 +3,7 @@ layout: post
 title: "PostgreSQL Backup"
 date: 2018-10-12 10:39:58 +0000
 comments: true
-categories: "Database"
+categories: "RDBMS"
 ---
 
 #### Installation

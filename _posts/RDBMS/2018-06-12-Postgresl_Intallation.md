@@ -3,7 +3,7 @@ layout: post
 title: "PostgreSQL Installation"
 date: 2018-06-12 10:39:58 +0000
 comments: true
-categories: "Database"
+categories: "RDBMS"
 ---
 
 ###PostgreSQL Installation###

@@ -3,7 +3,7 @@ layout: post
 title: "TiDB Installation"
 date: 2020-04-01 18:39:58 +0800
 comments: true
-categories: "Database"
+categories: "NewSQL"
 ---
 
 ### TiDB Installation

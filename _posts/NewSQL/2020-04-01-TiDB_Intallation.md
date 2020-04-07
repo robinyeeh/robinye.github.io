@@ -39,3 +39,7 @@ categories: "NewSQL"
 ```
 # mysql -h 127.0.0.1 -P 4000 -u root
 ```
+
+###  Amazon Aurora
+
+I will try out Amazon Aurora if i have time.
